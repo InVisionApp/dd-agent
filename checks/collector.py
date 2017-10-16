@@ -200,15 +200,16 @@ class Collector(object):
             psutil.PROCFS_PATH = procfs_path
 
         # Unix System Checks
-        self._unix_system_checks = {
-            'io': u.IO(log),
-            'load': u.Load(log),
-            'memory': u.Memory(log),
-            'processes': u.Processes(log),
-            'cpu': u.Cpu(log),
-            'system': u.System(log),
-            'file_handles': u.FileHandles(log)
-        }
+        # removed by afrank 2018/10/16
+        #self._unix_system_checks = {
+        #    'io': u.IO(log),
+        #    'load': u.Load(log),
+        #    'memory': u.Memory(log),
+        #    'processes': u.Processes(log),
+        #    'cpu': u.Cpu(log),
+        #    'system': u.System(log),
+        #    'file_handles': u.FileHandles(log)
+        #}
 
         # Win32 System `Checks
         self._win32_system_checks = {
